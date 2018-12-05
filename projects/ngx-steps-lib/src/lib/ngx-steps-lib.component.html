@@ -1,0 +1,14 @@
+<div class="col-md-9 col-sm-9 col-xs-9 p-0 d-flex flex-row justify-content-around time-line-div mt-1 mb-5">
+  <ng-container *ngFor="let step of steps; let i = index; let odd = odd; let even = even;">
+      <div class="time-line-item  " [ngClass]="{'time-line-completed': finishedSteps.includes(i + 1), 'time-line-focus': focusingStep === (i + 1), 'time-line-untouched': untouchedSteps.includes(i + 1)}">
+
+          <i class="icon icon--check link-icon-text__icon time-line-text-unfocused" *ngIf="finishedSteps.includes(i + 1)"></i>
+          <span class="text-white " *ngIf="!finishedSteps.includes(i + 1)" [ngClass]="{'time-line-text-unfocused': finishedSteps.includes(i + 1) || untouchedSteps.includes(i + 1), 'text-time-line': focusingStep === i + 1}">{{i
+              + 1}}</span>
+      </div>
+
+      <div class="line-div" *ngIf=" i !== steps.length - 1">
+          <div class="horizonal-line"></div>
+      </div>
+  </ng-container>
+</div>

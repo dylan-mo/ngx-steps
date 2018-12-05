@@ -1,0 +1,84 @@
+
+@import '~bootstrap/scss/bootstrap';
+
+.time-line-item {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.text-time-line {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 45px;
+}
+
+.horizonal-line {
+  border-top: solid 1px #50bebe;
+  border-bottom: solid 1px #50bebe;
+  width: 100%;
+  height: 0px;
+  line-height: 50px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.line-div {
+  text-align: center;
+  width: calc((100% - 50px - 40px * 3) / 3);
+  height: 50px;
+}
+
+.time-line-item.time-line-completed {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #b81604 !important;
+  margin-top: 0.25rem !important;
+}
+
+.time-line-text-unfocused {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff !important;
+  line-height: 35px;
+}
+
+.time-line-item.time-line-focus {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #d5001c !important;
+}
+
+.time-line-item.time-line-untouched {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #c8cacb !important;
+  margin-top: 0.25rem !important;
+}
+
+.time-line-item.border-porsche-danger {
+  border-color: #d5001c !important;
+}
+
+.text-porsche-danger {
+  color: #d5001c !important;
+}
+
+.time-line-item.bg-porsche-danger {
+  background-color: #d5001c !important;
+}
+
+.time-line-item.bg-porsche-heighlight {
+  background-color: #c0c2bc !important;
+}
