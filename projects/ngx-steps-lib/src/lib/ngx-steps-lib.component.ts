@@ -12,7 +12,6 @@ export class NgxStepsLibComponent implements OnInit {
     finishedSteps: any[] = [];
     focusingStep: number;
     untouchedSteps: any[] = [];
-    scrollElement: any;
 
     constructor() {}
 
@@ -49,14 +48,12 @@ export class NgxStepsLibComponent implements OnInit {
     }
 
     nextStep() {
-        const element = document.querySelector('#scrollId');
 
         if (this.focusingStep <= this.steps.length) {
             this.focusingStep++;
 
             this.finishedSteps = this.getFinishedSteps(this.focusingStep);
             this.untouchedSteps = this.getUntouchedSteps(this.focusingStep);
-            this.scrollElement.scrollTop = 0; // Scroll to top each time step changes.
         }
 
         return this.focusingStep;
@@ -69,7 +66,6 @@ export class NgxStepsLibComponent implements OnInit {
 
             this.finishedSteps = this.getFinishedSteps(this.focusingStep);
             this.untouchedSteps = this.getUntouchedSteps(this.focusingStep);
-            this.scrollElement.scrollTop = 0; // Scroll to top each time step changes.
         }
 
         return this.focusingStep;
