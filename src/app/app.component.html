@@ -1,1 +1,6 @@
 <ngx-steps [steps]="steps"></ngx-steps>
+
+<div class="btn-list d-flex flex-row justify-content-around w-100 mt-4">
+  <button type="button"  class="btn btn-lg btn-primary" (click)="preClick($event)">Previous</button>
+  <button type="button"  class="btn btn-lg btn-danger" (click)="nextClick($event)">&nbsp;&nbsp;Next&nbsp;&nbsp;</button>
+</div>

@@ -2,7 +2,8 @@
   <ng-container *ngFor="let step of steps; let i = index; let odd = odd; let even = even;">
       <div class="time-line-item  " [ngClass]="{'time-line-completed': finishedSteps.includes(i + 1), 'time-line-focus': focusingStep === (i + 1), 'time-line-untouched': untouchedSteps.includes(i + 1)}">
 
-          <i class="icon icon--check link-icon-text__icon time-line-text-unfocused" *ngIf="finishedSteps.includes(i + 1)"></i>
+          <!-- <i class="icon icon--check link-icon-text__icon time-line-text-unfocused" *ngIf="finishedSteps.includes(i + 1)"></i> -->
+          <fa-icon class="time-line-text-unfocused" [icon]="['fas', 'check']"  *ngIf="finishedSteps.includes(i + 1)"></fa-icon>
           <span class="text-white " *ngIf="!finishedSteps.includes(i + 1)" [ngClass]="{'time-line-text-unfocused': finishedSteps.includes(i + 1) || untouchedSteps.includes(i + 1), 'text-time-line': focusingStep === i + 1}">{{i
               + 1}}</span>
       </div>

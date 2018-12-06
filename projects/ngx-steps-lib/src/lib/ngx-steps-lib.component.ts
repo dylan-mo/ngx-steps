@@ -13,7 +13,8 @@ export class NgxStepsLibComponent implements OnInit {
     focusingStep: number;
     untouchedSteps: any[] = [];
 
-    constructor() {}
+    constructor() {
+    }
 
     ngOnInit() {
         const _this = this;
